@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+/* Normal CSS Variables */
+:root {
+  --main-background: #eae7d8;
+  
+  --main-color: #2B6CB0;
+  --second-color: #16355a;
+  --second-background: #2f2e41;
+}
+
+  
+
+/* Tailwind Theme Tokens (optional) */
+@theme {
+  --animate-wiggle: wiggle 10s ease-in-out infinite;
+  --animate-move:mov 1s ease-in-out infinite;
+  --animate-pulse3: ask 1s ease-in-out  3;
+ 
+}
+@keyframes ask {
+
+50%{
+  opacity: 0.5;
+}
+
+
+}
+@keyframes wiggle {
+  0% { transform: translate(0px, 0px); }
+  25% { transform: translate(5px, -5px); }
+  50% { transform: translate(-5px, 5px); }
+  75% { transform: translate(5px, 5px); }
+  100% { transform: translate(0px, 0px); }
+}
+@keyframes mov{
+  0%,100%{ 
+    transform: translateX(0px);
+  }
+  50%{
+    transform: translateX(4px);
+  }
+}
